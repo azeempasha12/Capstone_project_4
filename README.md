@@ -1,4 +1,4 @@
-     ##*AlmaBetter Backend Project*#
+     #AlmaBetter Backend Project#
      #Get_Youtube_Subscriber#
      This is a simple backend project that contains a RESTful API for getting information about YouTube channel subscribers. The project is developed with Node.js and Express, 
      and the database used for managing the subscriber data is MongoDB. The subscriber's data consists of fields such as their ID, Names, Subscribed Channels,
