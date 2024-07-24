@@ -12,15 +12,13 @@
 
   #Application Folder Structure#
   
-  ├── src/
-│   ├── .env
-│   ├── index.html
-│   ├── server.js
-│   ├── 
-│   └── models
-│       
-├── {} package-lock.json
-└── {}package.json
+├── src/
+│ ├── .env
+│ ├── index.html
+│ ├── server.js
+│ └── models/
+├── package-lock.json
+└── package.json
 
 
 #Installation#
