@@ -8,7 +8,8 @@ The API has several endpoints that let users get data in JSON format, such as:
 - An endpoint that returns a list of all subscribers.
 - An endpoint that returns a list of names and subscribed channels for each subscriber.
 - An endpoint that returns information about a subscriber based on their ID.
-  web deployment:- https://capstone-project-4-nce5b750e-azeempasha12s-projects.vercel.app/
+
+web deployment:- https://capstone-project-4-nce5b750e-azeempasha12s-projects.vercel.app/
 
 ## Application Folder Structure
 
