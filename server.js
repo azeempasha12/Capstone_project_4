@@ -4,7 +4,7 @@ const cors = require("cors");
 const path = require("path");
 const dotenv = require("dotenv");
 
-dotenv.config(); // Load environment variables from .env file
+dotenv.config();
 
 const app = express();
 const Getsubscriber = express.Router();
@@ -17,7 +17,6 @@ app.use("/subscribers1", Getsubscriber1);
 
 // MongoDB configuration
 const url = process.env.MONGODB_URI;
-console.log("MongoDB URI:", url); // Debugging log
 if (!url || !url.startsWith("mongodb")) {
     console.error("Invalid or missing MongoDB URI");
     process.exit(1);
@@ -33,6 +32,7 @@ app.get("/", (req, res) => {
 Getsubscriber.get("/", async (req, res) => {
     try {
         let data = await db.collection("subscriber").find({}).toArray();
+        console.log(data)
         res.status(200).send(data);
     } catch (error) {
         console.error(error);
@@ -73,14 +73,14 @@ Getsubscriber1.get("/:name", async (req, res) => {
 async function connectToMongoAndStartServer() {
     try {
         await client.connect();
-        db = client.db("database");
+        db = client.db("myDatabase");
         console.log("Connected to MongoDB");
         app.listen(3000, () => {
             console.log("Server is listening on port 3000");
         });
     } catch (error) {
         console.error("Failed to connect to MongoDB", error);
-        process.exit(1);  // Exit the process with a failure code
+        process.exit(1);
     }
 }
 
